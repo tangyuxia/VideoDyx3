@@ -11,11 +11,11 @@ from VideoSpider.settings import APP_URL
 def video_request_headers(aes_text, server_url: str = 'https://player.ddzyku.com:3653/api'):
     """下载视频，headers"""
     method = 'GET'
-    timestamp= time.time()
+    timestamp= str(int(time.time()))
     # timestamp = '1694661806'
     guding = '55ca5c4d11424dcecfe16c08a943afdc'
     string_sign = encrypt_data(aes_text)
-    key = md5_encrypt(server_url + method + str(timestamp) + guding)
+    key = md5_encrypt(server_url + method + timestamp + guding)
     x_player_signature = hmac_sha256(string_sign, key)
     headers = {
         'X-PLAYER-TIMESTAMP': timestamp,

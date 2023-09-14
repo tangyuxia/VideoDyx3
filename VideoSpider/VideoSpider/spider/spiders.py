@@ -204,9 +204,8 @@ class VideoSpider:
 
     async def main(self):
         """主函数"""
-        HEADERS["Host"] = "s.xlzys.com"
         async with ClientSession(trust_env=True) as session:
-
+            HEADERS["Host"] = "s.xlzys.com"
             # 获取m3u8地址
             m3u8_url_dict: dict = await m3u8_url(INDEX_URL, SERVER_URL_PLAY, SERVER_URL, REQUEST_TOKEN_URL, USER_AGENT,
                                                  session)
