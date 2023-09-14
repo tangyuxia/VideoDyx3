@@ -11,8 +11,8 @@ import asyncio
 
 import aiohttp
 
-from index_html import video_sid
-from vode_url import get_url_dict
+from VideoSpider.spider.index_html import video_sid
+from VideoSpider.spider.vode_url import get_url_dict
 
 
 async def m3u8_url_ciphertext(url: str, session: aiohttp.ClientSession) -> str:

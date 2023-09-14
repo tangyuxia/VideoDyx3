@@ -9,8 +9,8 @@ import json
 import aiohttp
 from aiohttp import ClientSession
 
-from get_video_url import m3u8_url_ciphertext
-from request_params import video_request_headers, video_request_params
+from VideoSpider.spider.get_video_url import m3u8_url_ciphertext
+from VideoSpider.spider.request_params import video_request_headers, video_request_params
 from VideoSpider.urlits.aes_e_d import decrypt_data
 from VideoSpider.settings import HEADERS, USER_AGENT
 
