@@ -5,6 +5,6 @@
 from VideoSpider.spider.spiders import VideoSpider
 
 if __name__ == '__main__':
-    """运行"""
+    """运行文件"""
     video = VideoSpider()
     video.run()
