@@ -11,7 +11,7 @@ from VideoSpider.settings import APP_URL
 def video_request_headers(aes_text, server_url: str = 'https://player.ddzyku.com:3653/api'):
     """下载视频，headers"""
     method = 'GET'
-    timestamp= str(int(time.time()))
+    timestamp = str(int(time.time()))
     # timestamp = '1694661806'
     guding = '55ca5c4d11424dcecfe16c08a943afdc'
     string_sign = encrypt_data(aes_text)
@@ -26,7 +26,7 @@ def video_request_headers(aes_text, server_url: str = 'https://player.ddzyku.com
     return headers
 
 
-def video_request_params(usera_gent: str , request_token_url: str, url: str, app_url: str = APP_URL):
+def video_request_params(usera_gent: str, request_token_url: str, url: str, app_url: str = APP_URL):
     """请求参数"""
     params = {}
     params['app_key'] = md5_encrypt(app_url)
