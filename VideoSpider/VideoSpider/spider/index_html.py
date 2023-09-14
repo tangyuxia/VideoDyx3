@@ -74,7 +74,7 @@ if __name__ == '__main__':
 
     async def main():
         async with aiohttp.ClientSession(trust_env=True) as session:
-            video_sid_tuple=await video_sid(url=url_,session=session)
+            video_sid_tuple = await video_sid(url=url_, session=session)
             print(video_sid_tuple)
 
 
