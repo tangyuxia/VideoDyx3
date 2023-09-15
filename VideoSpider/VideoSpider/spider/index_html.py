@@ -13,7 +13,7 @@ import random
 async def random_sid(sid_list) -> tuple:
     # # 返回一个随机的视频视频解析列表，('421024', '2', 0)
     # return random.choice(sid_list)
-    # 某些地址不一定能下载，暂时反复第三个
+    # 某些地址不一定能下载，暂时返回第三个
     return sid_list[2]
 
 
