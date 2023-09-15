@@ -3,7 +3,10 @@
 # Date : 2023/9/12 17:16
 # File : spiders.py
 
-"""下载m3u8视频"""
+"""
+下载m3u8视频
+"""
+
 import binascii
 import os
 from urllib.parse import urljoin
